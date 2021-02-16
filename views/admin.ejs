@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Admin Page</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">Let's Travel</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" tabindex="-1" >Contact us</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="/admin" tabindex="-1" >Admin Page</a>
+                </li>
+                <li class="nav-item">
+                  <button class="btn btn-outline-secondary log-out-btn">Log Out</button>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="phone number" aria-label="Search">
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Call me</button>
+              </form>
+            </div>
+            </div>
+          </nav>
+
+   </header>
+    <main>
+       <div class="container page-wrapper">
+          <h1>Admin Page</h1>
+          <hr>
+          <div class="row">
+              <div class="col-3">
+                  <div class="card">
+                      <div class="card-block">
+                        <div class="nav flex-column nav-pills " id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                            <a class="nav-link active" id="v-pills-articles-tab" data-toggle="pill" href="#v-pills-articles" role="tab" aria-controls="v-pills-articles" aria-selected="true">Article</a>
+                            <a class="nav-link" id="v-pills-mails-tab" data-toggle="pill" href="#v-pills-mails" role="tab" aria-controls="v-pills-mails" aria-selected="false">Mails</a>
+                            <a class="nav-link" id="v-pills-callback-tab" data-toggle="pill" href="#v-pills-callback" role="tab" aria-controls="v-pills-callback" aria-selected="false">CallBack</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-9">
+                  <div class="card">
+                      <div class="card-block">
+                        <div class="tab-content" id="v-pills-tabContent">
+                            <div class="tab-pane fade  show active " id="v-pills-articles" role="tabpanel" aria-labelledby="v-pills-articles-tab">
+                              <button class=".btn btn-primary create-post-btn">Add Post</button>
+                              <div class="articlesclass">
+                              </div>
+                              
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-mails" role="tabpanel" aria-labelledby="v-pills-mails-tab">...Mail Content</div>
+                            <div class="tab-pane fade" id="v-pills-callback" role="tabpanel" aria-labelledby="v-pills-callback-tab">
+                              
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-create-post" role="tabpanel" aria-labelledby="v-pills-create-post-tab">
+                              <h1>Create Posts</h1>
+                              <form class="create-post-form" >
+                                <div class="form-group">
+                                  <label for="create-title">Title</label>
+                                  <input type="text" class="form-control" id="create-title" placeholder="Title">
+                                </div>
+                                <div class="form-group">
+                                  <label for="create-country" class="form-label">Country</label>
+                                  <input type="text" class="form-control" id="create-country" placeholder="Country">
+                                </div>
+                                <div class="form-group">
+                                  <label for="create-image-url" class="form-label">Image</label>
+                                  <input type="text" class="form-control" id="create-image-url" placeholder="URL">
+                                </div>
+                                <p>or</p>
+                                <input class="form-control-file" type="file" id="create-image-file">
+                                <div class="form-group">
+                                  <label for="create-text" class="form-label">Text</label>
+                                  <textarea class="form-control" id="create-text" rows="5"></textarea>
+                                </div>
+                                <button class="btn btn-primary">post</button>
+
+                              </form>
+                            </div>
+
+             <!-- ******************************Update Form ***********************************************************8 -->
+                            <div class="tab-pane fade" id="v-pills-update-post" role="tabpanel" aria-labelledby="v-pills-update-post-tab">
+                              <h1>Update Posts</h1>
+                              <form class="update-post-form" >
+                                <div class="form-group">
+                                  <label for="update-title">Title</label>
+                                  <input type="text" class="form-control" id="update-title" placeholder="Title">
+                                </div>
+                                <div class="form-group">
+                                  <label for="update-text" class="form-label">Text</label>
+                                  <textarea class="form-control" id="update-text" rows="5"></textarea>
+                                </div>
+                                <button class="btn btn-primary ">Update Post</button>
+
+                              </form>
+                            </div>
+
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+       </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="/js/bootstrap.min.css"></script>
+    <script src="/js/posts.js"></script>
+    <script src="/admin/js/create-post.js"></script>
+    <script src="/admin/js/delete-post.js"></script>
+    <script src="/admin/js/update-post.js"></script>
+    <script src="/admin/js/callback-requests.js"></script>
+    <script src="/admin/js/emails.js"></script>
+    <script src="/admin/js/main.js"></script>
+</body>
+</html>
