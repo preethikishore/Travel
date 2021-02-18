@@ -10,7 +10,7 @@
     articleBlock.addEventListener('click',async function(e)
     {
          id = e.target.parentNode.parentNode.querySelector('.id').value;
-        let postValue = await fetch('http://localhost:3000/posts/' +id)
+        let postValue = await fetch('/posts/' +id)
         .then((resp)=> resp.json())
         .then((data)=>  data);
         titleInp.value = postValue.title; 
@@ -31,7 +31,7 @@
     updateForm.addEventListener('submit',function(e)
     {
         e.preventDefault();
-        fetch('http://localhost:3000/posts/' +id,{
+        fetch('/posts/' +id,{
             method: 'PUT',
             headers: {
                 'Content-Type' :'application/json'

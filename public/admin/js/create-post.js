@@ -15,7 +15,7 @@ createForm.addEventListener('submit',function(e){
    data.append('text',text);
    data.append('description',text.substring(0,text.indexOf('.') + 1));
    data.append('imageFile',createImageFile.files[0]);
-   fetch('http://localhost:3000/posts',{
+   fetch('/posts',{
        method:'POST',
        body:data
    }).then((response)=> response.text())
